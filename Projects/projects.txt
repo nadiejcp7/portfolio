@@ -1,0 +1,6 @@
+LogoPlus.png,Plus Services & Notary,0
+LogoBiblioteca.webp,Biblioteca Virtual,0
+LogoMusica.png,Reproductor de Musica,1
+LogoServidor.png,Servidor local,1
+LogoArduino.png,Conector a Arduino,1
+LogoConstruccion.svg,Página en construcción,2

@@ -1,0 +1,6 @@
+Servidor Local
+El servidor de archivos permite a los usuarios compartir archivos fácilmente a través de un servidor local, asegurando una conexión rápida y segura. Este sistema fue desarrollado con un backend en JavaScript, que gestiona la transmisión de archivos y mantiene un flujo de datos estable, facilitando el intercambio en tiempo real.
+En cuanto al diseño, la página se destaca por su aspecto visual atractivo y moderno. La interfaz es limpia y facilita que los usuarios seleccionen y envíen archivos de forma intuitiva, sin complicaciones. La estructura visual está pensada para que cualquier persona pueda entender y usar las funciones de transferencia sin necesidad de conocimientos técnicos avanzados.
+La combinación de un backend robusto en JavaScript y un diseño responsivo hace que esta página sea ideal para el intercambio de archivos en diversos dispositivos. Esto permite que los usuarios disfruten de una experiencia confiable y adaptable, tanto en redes locales como en otros entornos de uso personal o colaborativo.
+Puedes acceder al código, puedes dar click en el logo mostrado a continuación:
+https://github.com/nadiejcp7/server

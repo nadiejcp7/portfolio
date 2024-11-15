@@ -1,0 +1,6 @@
+Biblioteca Virtual
+Esta página tiene un recurso invaluable para el acceso a información. Su diseño fue pensado para facilitar la búsqueda de libros, artículos y otros materiales de forma rápida y eficiente. Incluye un sistema de filtrado avanzado que permite a los usuarios encontrar exactamente lo que buscan con pocos clics, mejorando así la experiencia general.
+A nivel de organización, la página se estructura en categorías claras y bien definidas, permitiendo una navegación intuitiva y ordenada. También se integraron funcionalidades para que los usuarios puedan ver detalles de cada recurso, como descripciones, autores y año de publicación, lo que facilita la selección y la consulta de los materiales.
+Una característica importante es la inclusión de un sistema de gestión de contenidos, que te permite actualizar y organizar la biblioteca de manera eficiente. La página fue diseñada para ser escalable, lo que significa que puedes agregar más recursos con facilidad, asegurando que la biblioteca crezca con el tiempo. Además, su diseño responsive garantiza que los usuarios puedan acceder al contenido desde cualquier dispositivo, brindando una experiencia óptima.
+Puedes acceder al sitio web dando click en el logo mostrado a continuación:
+https://nadiejcp7.github.io/biblioteca/

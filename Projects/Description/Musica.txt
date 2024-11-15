@@ -1,0 +1,6 @@
+Reproductor de Música
+Esta página permite a los usuarios reproducir cualquier canción de manera sencilla y automática. El usuario puede enviar un enlace o simplemente ingresar el nombre de la canción en un campo de búsqueda, y el backend, programado en Python, se encarga de buscar y reproducir la canción deseada. Este sistema permite que la experiencia del usuario sea fluida y rápida, sin necesidad de pasos adicionales.
+El backend en Python está configurado para manejar de forma eficiente las solicitudes de reproducción y la obtención de las canciones, optimizando tanto la velocidad de respuesta como la calidad del audio. Gracias a esta configuración, el proceso de reproducción es prácticamente inmediato y garantiza una excelente experiencia de usuario. También puede adelantar, pausar, reanudar y retroceder canciones.
+Además, el diseño de la página es minimalista y fácil de navegar, permitiendo a los usuarios acceder a las funciones esenciales sin distracciones. La interfaz limpia y organizada facilita la reproducción de música desde distintos dispositivos, adaptándose tanto a computadoras como a móviles, para una experiencia de escucha continua y versátil.
+Puedes acceder al código dando click en el logo mostrado a continuación:
+https://github.com/nadiejcp7/MusicServer

@@ -65,7 +65,7 @@ const button = document.getElementsByClassName('menu-button')[0];
 button.addEventListener('click', function () {
     const nav = document.getElementById('w-nav-overlay-0');
     if (!showing) {
-        nav.style.height = '1000px';
+        nav.style.height = '300px';
         nav.style.display = 'block';
         const navi = document.getElementsByClassName('nav-menu')[0];
         navi.style.transition = 'all, transform 401ms';
@@ -89,3 +89,87 @@ button.addEventListener('click', function () {
         nav.style.height = '0px';
     }
 });
+window.onload = function () {
+    const projects = document.getElementById('projects-container');
+    console.log(projects);
+    if (projects) {
+        fetch("./Projects/projects.txt")
+            .then((res) => res.text())
+            .then((text) => {
+            const libros = text.split('\n');
+            libros.forEach(libro => {
+                const data = libro.split(",");
+                projects.appendChild(createElement('./Projects/Images/' + data[0], data[1], Number(data[2])));
+            });
+        })
+            .catch((e) => console.error(e));
+    }
+    else {
+        const title = document.getElementById('page-title');
+        if (title) {
+            const nameFile = parent.document.URL.substring(parent.document.URL.indexOf('?'), parent.document.URL.length).split("=")[1];
+            fetch('../Projects/Description/' + nameFile.substring(0, nameFile.lastIndexOf('.')) + '.txt')
+                .then((res) => res.text())
+                .then((text) => {
+                console.log('aqui');
+                console.log(text);
+                if (text.startsWith('<')) {
+                    title.innerHTML = 'Trying to hack NASA?';
+                    setDatatoElement('p1', 'This is an informative site, do not try to screw it!');
+                    setDatatoElement('p2', 'If you are here by accident. I apologize, something may have gone wrong.');
+                    setDatatoElement('p3', 'I still offer you my help, wanna be my friend?');
+                    setDatatoElement('p4', 'Click the logo below.');
+                    document.getElementById('page-logo').src = '../Projects/Images/LogoNotFound.png';
+                    document.getElementById('page-link').href = '../index.html';
+                }
+                else {
+                    const infos = text.split('\n');
+                    title.innerHTML = infos[0];
+                    setDatatoElement('p1', infos[1]);
+                    setDatatoElement('p2', infos[2]);
+                    setDatatoElement('p3', infos[3]);
+                    setDatatoElement('p4', infos[4]);
+                    document.getElementById('page-logo').src = '../Projects/Images/Logo' + nameFile;
+                    document.getElementById('page-link').href = infos[5];
+                }
+            });
+        }
+    }
+};
+function setDatatoElement(id, text) {
+    document.getElementById(id).innerHTML = text;
+}
+function createElement(source, titulo, tipo) {
+    const div = document.createElement('div');
+    div.role = 'listitem';
+    div.className = 'project-grid-item w-dyn-item';
+    const a1 = document.createElement('a');
+    a1.href = "./Projects/Proyecto.html?nameProject=" + source.split('Logo')[1];
+    a1.className = "project-item w-inline-block";
+    const div1 = document.createElement('div');
+    div1.className = 'project-image-wrapper';
+    const img11 = document.createElement('img');
+    img11.src = source;
+    img11.loading = 'lazy';
+    img11.sizes = "(max-width: 767px) 85.375px, (max-width: 991px) 14vw, (max-width: 1439px) 20vw, 31vw";
+    img11.className = "project-image-abs";
+    const div11 = document.createElement('div');
+    div11.className = 'project-dummy';
+    div1.appendChild(img11);
+    div1.appendChild(div11);
+    a1.appendChild(div1);
+    const div2 = document.createElement('div');
+    div2.className = 'project-content';
+    const div21 = document.createElement('div');
+    div21.className = 'project-title';
+    div21.innerHTML = titulo;
+    const types = ['Página Web', 'Página Web - Backend', 'Ciencia de datos'];
+    const div22 = document.createElement('div');
+    div22.className = 'project-description';
+    div22.innerHTML = types[tipo];
+    div2.appendChild(div21);
+    div2.appendChild(div22);
+    a1.appendChild(div2);
+    div.append(a1);
+    return div;
+}
