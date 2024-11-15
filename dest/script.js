@@ -150,6 +150,7 @@ function createElement(source, titulo, tipo) {
     div1.className = 'project-image-wrapper';
     const img11 = document.createElement('img');
     img11.src = source;
+    img11.alt = 'logo Webpage';
     img11.loading = 'lazy';
     img11.sizes = "(max-width: 767px) 85.375px, (max-width: 991px) 14vw, (max-width: 1439px) 20vw, 31vw";
     img11.className = "project-image-abs";
